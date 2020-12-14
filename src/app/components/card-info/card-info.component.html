@@ -1,4 +1,14 @@
-<h1>#{{ card.id }} - {{ card.name }}</h1>
-<img [src]="card.image" alt="">
+<div>
+  <h1>#{{ card.id }} - {{ card.name }}</h1>
+  <img [src]="card.image" alt="" style="width: 200px;">
 
-<p>{{ card.quote }}</p>
+  <p>{{ card.quote }}</p>
+</div>
+
+
+<div>
+  <h3>Sets availables:</h3>
+  <div *ngFor= "let expansionData of card.expansion" >
+    {{ expansionData.name }}
+  </div>
+</div>

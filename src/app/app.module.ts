@@ -9,6 +9,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CardInfoComponent } from './components/card-info/card-info.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AddCardComponent } from './components/add-card/add-card.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AddCardComponent } from './components/add-card/add-card.component';
     HeaderComponent,
     CardGalleryComponent,
     CardInfoComponent,
-    AddCardComponent
+    AddCardComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
