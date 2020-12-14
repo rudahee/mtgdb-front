@@ -20,4 +20,9 @@ export class CardGalleryComponent implements OnInit {
     )
   }
 
+  showCard(cardId: string): void {
+    this.database.getCard(cardId).subscribe(() => {
+    });
+  }
+
 }

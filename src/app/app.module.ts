@@ -7,18 +7,22 @@ import { HeaderComponent } from './components/header/header.component';
 import { CardGalleryComponent } from './components/card-gallery/card-gallery.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CardInfoComponent } from './components/card-info/card-info.component';
+import { AppRoutingModule } from './app-routing.module';
+import { AddCardComponent } from './components/add-card/add-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     CardGalleryComponent,
-    CardInfoComponent
+    CardInfoComponent,
+    AddCardComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

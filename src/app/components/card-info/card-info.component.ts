@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { switchMap } from 'rxjs/internal/operators/switchMap';
 import { DatabaseService } from 'src/app/services/database.service';
 
 @Component({
@@ -9,14 +11,20 @@ import { DatabaseService } from 'src/app/services/database.service';
 export class CardInfoComponent implements OnInit {
 
   cards: any[];
-  card: any;
+  card: any = {};
+  selectedId: number;
 
-  constructor(private database: DatabaseService) { }
+  constructor(private database: DatabaseService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.database.getCard().subscribe(
+    this.selectedId = +this.route.snapshot.paramMap.get('id');
+    this.showCard();
+  }
+
+  showCard(): void {
+    this.database.getCard(this.selectedId.toString()).subscribe(
       res => {
-        this.cards = res;
+        this.card = res;
       }
     )
   }

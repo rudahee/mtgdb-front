@@ -20,7 +20,8 @@ export class DatabaseService {
     return this.http.get<any>(this.url + '/cards');
   }
 
-  getCard(): Observable<any> {
-    return this.http.get<any>(this.url + '/card/' + '1');
+  getCard(id: string): Observable<any> {
+    return this.http.get<any>(this.url + '/card/' + id);
   }
+
 }
