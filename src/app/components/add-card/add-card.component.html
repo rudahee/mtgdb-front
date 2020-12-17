@@ -1,9 +1,8 @@
-<form action="post" class="formulario">
+<form [formGroup]="registerForm" class="formulario">
   <caption class="titulo">Agregar Carta</caption>
-  <input type="text" name="" id="" placeholder="nombre" class="input">
-  <input type="url" name="" id="" placeholder="imagen (URL)" class="input">
-  <input type="text" name="" id="" placeholder="cita" class="input">
+  <input type="text" formControlName="name" placeholder="nombre" class="input">
+  <input type="url" formControlName="image" placeholder="imagen (URL)" class="input">
+  <input type="text" formControlName="quote" placeholder="cita" class="input">
 
-
-  <button (click)="addCard()" class="btn btn-primary boton">Agregar Carta</button>
+  <button (click)="postCard()" class="btn btn-primary boton">Agregar Carta</button>
 </form>

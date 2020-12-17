@@ -1,7 +1,7 @@
-<div *ngIf= "cards.length == 0">
+<div *ngIf= "cards?.length == 0">
   <h3>No existen cartas en la base de datos</h3>
 </div>
-<div *ngIf= "cards.length != 0" class="d-flex flex-row flex-row justify-content-around align-item-start flex-wrap">
+<div *ngIf= "cards?.length != 0" class="d-flex flex-row flex-row justify-content-around align-item-start flex-wrap">
   <div *ngFor= "let card of cards" class="card d-flex flex-column align-items-center"
     (click)="showCard(card.id)">
     <h3 class="title">#{{card.id}} - {{card.name}}</h3>

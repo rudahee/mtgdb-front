@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { switchMap } from 'rxjs/internal/operators/switchMap';
 import { DatabaseService } from 'src/app/services/database.service';
+import { Card } from 'src/assets/Card';
 
 @Component({
   selector: 'app-card-info',
@@ -30,7 +31,7 @@ export class CardInfoComponent implements OnInit {
   }
 
   deleteCard(): void {
-    this.database.deleteCard(this.selectedId.toString()).subscribe(
+    this.database.deleteCardFromCardInfo(this.selectedId.toString()).subscribe(
     )
   }
 }

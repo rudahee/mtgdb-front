@@ -1,10 +1,9 @@
-<form action="post" class="formulario">
+<form [formGroup]="registerForm" class="formulario">
   <caption class="titulo">Editar Carta</caption>
-  <input type="number" name="" id="" placeholder="id" class="input">
-  <input type="text" name="" id="" placeholder="nombre" class="input">
-  <input type="url" name="" id="" placeholder="imagen (URL)" class="input">
-  <input type="text" name="" id="" placeholder="cita" class="input">
+  <input type="number" formControlName="id" placeholder="id" class="input">
+  <input type="text" formControlName="name" placeholder="nombre" class="input">
+  <input type="url" formControlName="image" placeholder="imagen (URL)" class="input">
+  <input type="text" formControlName="quote" placeholder="cita" class="input">
 
-
-  <button class="btn btn-primary boton">Editar Carta</button>
+  <button (click)="putCard()" class="btn btn-primary boton">Editar Carta</button>
 </form>

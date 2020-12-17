@@ -1,6 +1,6 @@
-<form action="post" class="formulario">
-  <caption class="titulo">Editar Carta</caption>
-  <input type="number" name="" id="" placeholder="id" class="input">
+<form [formGroup]="registerForm" class="formulario">
+  <caption class="titulo">Borrar Carta</caption>
+  <input type="number" formControlName="id" placeholder="id" class="input">
 
-  <button class="btn btn-primary boton">Editar Carta</button>
+  <button (click)="deleteCard()" class="btn btn-primary boton">Borrar Carta</button>
 </form>

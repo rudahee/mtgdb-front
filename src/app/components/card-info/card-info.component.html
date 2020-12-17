@@ -6,7 +6,7 @@
   <div *ngIf="card.quote != undefined" class="centrado">
     <h3 class="quote">Quote</h3>
     <p><i>{{ card.quote }}</i></p>
-    <a (click)="deleteCard()" class="btn btn-primary boton"> Eliminar esta carta </a>
+    <a (click)="deleteCard()" class="btn btn-primary boton" routerLink=""> Eliminar esta carta </a>
   </div>
 </div>
 
