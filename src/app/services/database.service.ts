@@ -24,4 +24,8 @@ export class DatabaseService {
     return this.http.get<any>(this.url + '/card/' + id);
   }
 
+  deleteCard(id: string): Observable<any> {
+    return this.http.delete<any>(this.url + '/card/' + id);
+  }
+
 }

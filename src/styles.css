@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+.titulo {
+  text-align: center;
+  color: black;
+  border-bottom: 1px solid black;
+  width: 30%;
+  margin-bottom: 15px;
+}
+
+.input, input:hover, input:active, input:focus {
+  margin: 5px 0;
+  font-size: 16px;
+  font-size: max(16px, 1em);
+  box-shadow: none ;
+  outline: none;
+  font-family: inherit;
+  padding: 0.25em 0.5em;
+  background-color: #fff;
+  border: none;
+  border-bottom: 2px solid black;
+}
+
+.boton {
+  margin-top: 10px;
+}
+
+.formulario {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+
+}

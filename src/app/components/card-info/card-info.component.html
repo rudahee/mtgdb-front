@@ -1,14 +1,13 @@
-<div>
+<div class="centrado">
   <h1>#{{ card.id }} - {{ card.name }}</h1>
-  <img [src]="card.image" alt="" style="width: 200px;">
+  <br>
+  <img [src]="card.image" alt="" style="width: 250px;">
 
-  <p>{{ card.quote }}</p>
-</div>
-
-
-<div>
-  <h3>Sets availables:</h3>
-  <div *ngFor= "let expansionData of card.expansion" >
-    {{ expansionData.name }}
+  <div *ngIf="card.quote != undefined" class="centrado">
+    <h3 class="quote">Quote</h3>
+    <p><i>{{ card.quote }}</i></p>
+    <a (click)="deleteCard()" class="btn btn-primary boton"> Eliminar esta carta </a>
   </div>
 </div>
+
+

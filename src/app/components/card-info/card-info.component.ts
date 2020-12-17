@@ -28,5 +28,10 @@ export class CardInfoComponent implements OnInit {
       }
     )
   }
+
+  deleteCard(): void {
+    this.database.deleteCard(this.selectedId.toString()).subscribe(
+    )
+  }
 }
 
